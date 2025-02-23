@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ÎÒµÄµÚÒ»¸öÍøÒ³</title>
+    <title>è´ªåƒè›‡æ¸¸æˆ</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 2px solid #333;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .game-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .game-info {
+            margin: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .level-up {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 255, 0, 0.8);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 24px;
+            animation: fadeInOut 2s ease-in-out;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
 </head>
 <body>
-    <h1>ÄãºÃ£¬ÊÀ½ç£¡</h1>
-    <p>ÕâÊÇÎÒÓÃ Git ¹ÜÀíµÄµÚÒ»¸öÍøÒ³</p>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="game-info">
+            <p>å¾—åˆ†: <span id="score">0</span></p>
+            <p>ç­‰çº§: <span id="level">1</span></p>
+            <p>ä½¿ç”¨æ–¹å‘é”®æ§åˆ¶è›‡çš„ç§»åŠ¨</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
 </body>
-</html>
+</html> 
